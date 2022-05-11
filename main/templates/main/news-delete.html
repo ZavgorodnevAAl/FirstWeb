@@ -1,0 +1,14 @@
+{% extends  'main/base.html' %}
+
+{% block title %}
+{{ task.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Форма удаления статьи</h1>
+    <p>{{ task.title }}</p>
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Удалить статью</button>
+    </form>
+{% endblock %}
